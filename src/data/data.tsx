@@ -1,7 +1,7 @@
 import {
   AcademicCapIcon,
+  ArchiveBoxIcon,
   ArrowDownTrayIcon,
-  BuildingOffice2Icon,
   CalendarIcon,
   FlagIcon,
   MapIcon,
@@ -14,6 +14,7 @@ import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
+import meImage from '../images/me.jpg';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
@@ -44,8 +45,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Sergi Torrellas - Full-stack developer',
+  description: "Sergi Torrellas - Full-stack developer",
 };
 
 /**
@@ -69,19 +70,27 @@ export type SectionId = (typeof SectionId)[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Sergi Torrellas.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a Barcelona based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
+        helping build a modern, mobile-first, domain registrar and site builder.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        Sergi counts on more than 15 years experience in the software industry with a multidisciplinary 
+        profile <strong className="text-stone-100">ranging from technical development to acting as product owner</strong>. 
+        He enjoys being in 
+        high-technology environments to develop cutting-edge technologies, learning new paradigms and 
+        providing valuable solutions. Additionally, Sergi has an extensive expertise in planning, estimating, 
+        risk/issue management, resource/budget follow-up and controlling activities to meet project requirements. 
       </p>
+      <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
+        In my free time time, you can catch me reading Tintin comic books,
+        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
+        <strong className="text-stone-100">Pyrinees</strong>.        
+      </p>
+      {/* <img src={meImage.src} width="200"></img> */}
     </>
   ),
   actions: [
@@ -103,17 +112,17 @@ export const heroData: Hero = {
  * About section
  */
 export const aboutData: About = {
-  profileImageSrc: profilepic,
-  description: `Use this bio section as your way of describing yourself and saying what you do, what technologies you like
-  to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing
-  in.`,
+  profileImageSrc: meImage,
+  description: `Sergi counts on more than 15 years experience in the software industry 
+    with a multidisciplinary profile ranging from technical development to acting as product owner. He enjoys being in high-technology environments to develop cutting-edge technologies, learning new paradigms and providing valuable solutions. Additionally, Sergi has an extensive expertise in planning, estimating, risk/issue management, resource/budget 
+    follow-up and controlling activities to meet project requirements.`,
   aboutItems: [
-    {label: 'Location', text: 'Victoria, BC', Icon: MapIcon},
-    {label: 'Age', text: '29', Icon: CalendarIcon},
-    {label: 'Nationality', text: 'Canadian / Irish', Icon: FlagIcon},
-    {label: 'Interests', text: 'Motorcycles, Muay Thai, Banjos', Icon: SparklesIcon},
-    {label: 'Study', text: 'University of Victoria', Icon: AcademicCapIcon},
-    {label: 'Employment', text: 'Instant Domains, inc.', Icon: BuildingOffice2Icon},
+    {label: 'Location', text: 'Barcelona, Spain', Icon: MapIcon},
+    {label: 'Star sign', text: 'Geminis', Icon: CalendarIcon},
+    {label: 'Nationality', text: 'Spanish', Icon: FlagIcon},
+    {label: 'Interests', text: 'Music, Trekking, Drawing', Icon: SparklesIcon},
+    {label: 'Study', text: 'Computer Science', Icon: AcademicCapIcon},
+    {label: 'Favorite food', text: 'Risotto', Icon: ArchiveBoxIcon},
   ],
 };
 
@@ -129,63 +138,79 @@ export const skills: SkillGroup[] = [
         level: 10,
       },
       {
-        name: 'French',
-        level: 4,
+        name: 'Spanish',
+        level: 10,
       },
       {
-        name: 'Spanish',
-        level: 3,
+        name: 'French',
+        level: 8,
+      },
+      {
+        name: 'Italian',
+        level: 4,
       },
     ],
   },
   {
-    name: 'Frontend development',
+    name: 'Frontend frameworks',
     skills: [
       {
         name: 'React',
         level: 9,
       },
       {
-        name: 'Typescript',
+        name: 'Angular',
+        level: 6,
+      },
+      {
+        name: 'Vue',
+        level: 4,
+      },
+      {
+        name: 'JQuery',
+        level: 9,
+      },
+    ],
+  },
+  {
+    name: 'Backend framework',
+    skills: [
+      {
+        name: 'Express',
+        level: 8,
+      },
+      {
+        name: 'NestJS',
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Django',
+        level: 10,
+      },
+      {
+        name: 'SpringBoot',
         level: 6,
       },
     ],
   },
   {
-    name: 'Backend development',
+    name: 'Development Languages',
     skills: [
       {
-        name: 'Node.js',
+        name: 'Javascript',
         level: 8,
       },
       {
-        name: 'Rust',
-        level: 5,
-      },
-      {
-        name: 'Golang',
-        level: 4,
-      },
-    ],
-  },
-  {
-    name: 'Mobile development',
-    skills: [
-      {
-        name: 'React Native',
+        name: 'Python',
         level: 9,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'Java',
+        level: 7,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'C/C++',
+        level: 6,
       },
     ],
   },
@@ -268,16 +293,23 @@ export const portfolioItems: PortfolioItem[] = [
  */
 export const education: TimelineItem[] = [
   {
-    date: 'April 2007',
-    location: 'Clown college',
-    title: 'Masters in Beer tasting',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'June 2011',
+    location: 'Universitat Oberta de Catalunya, Barcelona, Spain',
+    title: 'MEng in Open Source',
+    content: <p>Sofware Engineering, System administration, Project Management, Quality assurance, Bussiness models
+    Adapted to European Higher Education Area (EHEA) requirements</p>,
   },
   {
-    date: 'March 2003',
-    location: 'School of Business',
-    title: 'What did you study 101',
-    content: <p>Describe your experience at school, what you learned, what useful skills you have acquired etc.</p>,
+    date: 'September 2007',
+    location: 'UPC - ETSETB TelecomBCN',
+    title: 'MEng Electronic Engineering',
+    content: <p>Analog and digital electronics (specialty in Embedded Systems), Power Supply, Semiconductors, Microelectronics</p>,
+  },
+  {
+    date: 'September 2005',
+    location: 'UPC - ETSETB TelecomBCN',
+    title: 'MEng Electrical Engineering',
+    content: <p>Signal processing, Radio Frequency, Telematics, OS architecture, Radiocommunications</p>,
   },
 ];
 
@@ -313,19 +345,19 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'John Doe',
-      text: 'Use this as an opportunity to promote what it is like to work with you. High value testimonials include ones from current or past co-workers, managers, or from happy clients.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      name: 'David Ibánez',
+      text: 'I had the pleasure of working with Sergi for three years at Starlab, collaborating on several project teams. During this time, he demostrated a very deep knowledge in software development at different levels as well as true teamwork skills. The combination of interpersonal skills with a broad technology vision enables Sergi to grasp others perspective being able to get everyone to be on the same track. This rare mix of productivity and personal skills makes him to be a key people on any team, no matter where he falls on the organisation chart.',
+      image: 'https://media.licdn.com/dms/image/C4D03AQF3zf449cG1pA/profile-displayphoto-shrink_100_100/0/1614165385841?e=1697068800&v=beta&t=HVGCT2Jysvi3w4NmMmBtbaiCvhd6VPrN-C4Ud-yTFEg',
     },
     {
-      name: 'Jane Doe',
-      text: 'Here you should write some nice things that someone has said about you. Encourage them to be specific and include important details (notes about a project you were on together, impressive quality produced, etc).',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      name: 'Felip Miralles',
+      text: 'Sergi has been a key collaborator in my team and one of the most committed people I have had the luck to work with. His technological skills are excellent, hi creativity and proactiveness oustanding, and his special capability to face and solve all kind of problems is a hard to find asset in the marketplace. He has excellent team work, communication and business oriented comptetences. Sergis potential is enormous, and if it comes out, Id like to work with him again.',
+      image: 'https://media.licdn.com/dms/image/C5603AQFuPy39TZQSsQ/profile-displayphoto-shrink_100_100/0/1516346141303?e=1697068800&v=beta&t=Vukn_CbhRmFy2hP3FT53yHkl00r8joRCU9qSu5B9lsc',
     },
     {
-      name: 'Someone else',
-      text: 'Add several of these, and keep them as fresh as possible, but be sure to focus on quality testimonials with strong highlights of your skills/work ethic.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      name: 'Yanitsa Kazantseva',
+      text: 'The cooperation with Sergi was a great experience as usual. This time he exceeded by far our expectations. Everything went smoothly, on time and within the planed budget. Well be working on another upcoming project with him soon. Also our clients are thrilled with the results we??ve achieved together with Sergi.',
+      image: 'https://media.licdn.com/dms/image/C5603AQHxgBlDCii8hQ/profile-displayphoto-shrink_200_200/0/1535647782187?e=1697068800&v=beta&t=nmzZLzQni5sYs9AW2jkOLI_EzJWb7XajcdfeaKnE0oQ',
     },
   ],
 };
@@ -340,23 +372,23 @@ export const contact: ContactSection = {
   items: [
     {
       type: ContactType.Email,
-      text: 'reachout@timbaker.me',
-      href: 'mailto:reachout@timbaker.me',
+      text: 'storrellas at gmail com',
+      href: 'mailto:storrellas@gmail.com',
     },
     {
       type: ContactType.Location,
-      text: 'Victoria BC, Canada',
-      href: 'https://www.google.ca/maps/place/Victoria,+BC/@48.4262362,-123.376775,14z',
+      text: 'Barcelona, Spain',
+      href: 'https://www.google.com/maps/place/@41.409654,2.1539794,15z?entry=ttu',
     },
-    {
-      type: ContactType.Instagram,
-      text: '@tbakerx',
-      href: 'https://www.instagram.com/tbakerx/',
-    },
+    // {
+    //   type: ContactType.Instagram,
+    //   text: '@tbakerx',
+    //   href: 'https://www.instagram.com/tbakerx/',
+    // },
     {
       type: ContactType.Github,
-      text: 'tbakerx',
-      href: 'https://github.com/tbakerx',
+      text: 'storrellas',
+      href: 'https://github.com/storrellas',
     },
   ],
 };
@@ -365,9 +397,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/storrellas'},
+  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/22381195/sergi-torrellas'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/storrellas/'},
+  // {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/reactresume/'},
+  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/storrellas'},
 ];
