@@ -19,6 +19,7 @@ const ContactForm: FC = memo(() => {
   );
 
   const [data, setData] = useState<FormData>(defaultData);
+  const [showSuccess, setShowSuccess] = useState(false)
 
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
@@ -34,11 +35,9 @@ const ContactForm: FC = memo(() => {
   const handleSendMessage = useCallback(
     async (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      /**
-       * This is a good starting point to wire up your form submission logic
-       * */
-      console.log('Data to send: ', data);
+      setShowSuccess(false)
       await axios.post('/api/contact', data);
+      setShowSuccess(true)
     },
     [data],
   );
@@ -67,12 +66,15 @@ const ContactForm: FC = memo(() => {
         required
         rows={6}
       />
-      <button
-        aria-label="Submit contact form"
-        className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
-        type="submit">
-        Send Message
-      </button>
+      <div className='flex justify-start content-center'>
+        <button
+          aria-label="Submit contact form"
+          className="w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-medium text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+          type="submit">
+          Send Message
+        </button>
+        {showSuccess?<div className='mx-4 text-white flex items-center'>Message Sent!</div>:null}
+      </div>
     </form>
   );
 });
