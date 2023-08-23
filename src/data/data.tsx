@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 import GithubIcon from '../components/Icon/GithubIcon';
-import InstagramIcon from '../components/Icon/InstagramIcon';
+// import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
 import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
 import TwitterIcon from '../components/Icon/TwitterIcon';
@@ -26,7 +26,7 @@ import porfolioImage8 from '../images/portfolio/portfolio-8.jpg';
 import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
-import profilepic from '../images/profilepic.jpg';
+// import profilepic from '../images/profilepic.jpg';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -315,24 +315,52 @@ export const education: TimelineItem[] = [
 
 export const experience: TimelineItem[] = [
   {
-    date: 'March 2010 - Present',
-    location: 'Awesome Development Company',
-    title: 'Senior UX Engineer',
+    date: 'April 2021 - Present',
+    location: 'Nestle Global Services',
+    title: 'Technology Expert',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Nestle Digital Services Hub was created in 2016 with the aim  of promoting the digital transformation of the company. It aims at designing, shaping and implementing company’s strategy to maintain the digital platforms Nestlé uses to interact with consumers bringing new user experiences.
       </p>
     ),
   },
   {
-    date: 'March 2007 - February 2010',
-    location: 'Garage Startup Studio',
-    title: 'Junior bug fixer',
+    date: 'March 2018 - April 2021',
+    location: 'Sopra Steria Consulting',
+    title: 'Lead Solution Architect',
     content: (
       <p>
-        Describe work, special projects, notable achievements, what technologies you have been working with, and
-        anything else that would be useful for an employer to know.
+        Sopra's DigitalFactory is a team of passionate engineers providing omnichannel end-to-end solutions for our customers (Nestlé, Caixabank, Allianz). Our mission is to make the digital interaction as simple and elegant as possible basing our collective and daily in a spirit of "start-up", intrapreneurship and engineering
+      </p>
+    ),
+  },
+  {
+    date: 'April 2016 - February 2018',
+    location: 'Whisbi',
+    title: 'Team Lead',
+    content: (
+      <p>
+        Whisbi offers real-time video lead management technology for retail that enables online businesses to engage and enhance the e-commerce experience. As such, companies can automatically ‘teleport’ their online visitors to stores or showrooms so as to showcase physical products to web.       
+      </p>
+    ),
+  },
+  {
+    date: 'April 2013 - March 2016',
+    location: 'Neuroelectrics',
+    title: 'Senior SW engineer',
+    content: (
+      <p>
+        Start-up company developing high quality biomedical devices with emphasis on usability, accuracy and reliability. 
+      </p>
+    ),
+  },
+  {
+    date: 'September 2009 - April 2013',
+    location: 'Barcelona Digital Technology Center',
+    title: 'Team Lead - AIL Health',
+    content: (
+      <p>
+        Leading and coordination of the Active Independent Living (AIL) research team. AIL is to explore ICT-based solutions for dependent people with different types of impairment, functional or cognitive, so as to enhance their autonomy, dignity and integration.
       </p>
     ),
   },
