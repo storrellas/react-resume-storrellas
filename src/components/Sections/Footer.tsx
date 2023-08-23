@@ -1,10 +1,23 @@
 import {BoltIcon, ChevronUpIcon} from '@heroicons/react/24/solid';
-import {FC, memo} from 'react';
+import axios from 'axios';
+import {FC, memo, useEffect, useState} from 'react';
 
 import {SectionId} from '../../data/data';
 import Socials from '../Socials';
 
-const Footer: FC = memo(() => (
+
+const Footer: FC = memo(() => {
+  const [nVisitors, setNVisitors ] = useState(0)
+
+  useEffect( () => {
+    ( async () => {
+      const response = await axios.get('/api/visitors');
+      console.log("response ", response.data)
+      setNVisitors( response.data.n_visitors )
+    })();
+  }, [])
+
+  return (
   <div className="relative bg-neutral-900 px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
     <div className="absolute inset-x-0 -top-4 flex justify-center sm:-top-6">
       <a
@@ -26,10 +39,16 @@ const Footer: FC = memo(() => (
           <span className="italic text-yellow">Resume</span>
         </span>
       </a>
+      <div>
+        <span>
+          Number of visits: {nVisitors}
+        </span>
+      </div>
       <span className="text-sm text-neutral-700">© Copyright 2022 Tim Baker</span>
     </div>
   </div>
-));
+  )
+});
 
 Footer.displayName = 'Footer';
 export default Footer;

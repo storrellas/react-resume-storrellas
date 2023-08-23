@@ -1,0 +1,20 @@
+version: "3"
+services:
+  react-resume-template:
+    image: react-resume-template
+    container_name: react-resume-template
+    restart: always
+    tty: true
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile     
+    ports:
+      - 8787:3000
+    networks:
+      react-resume-template:
+
+
+networks:
+  react-resume-template:    
+
+
