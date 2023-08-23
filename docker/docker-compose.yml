@@ -8,6 +8,9 @@ services:
     build:
       context: ..
       dockerfile: docker/Dockerfile     
+    environment:
+      MJ_APIKEY_PUBLIC: $MJ_APIKEY_PUBLIC
+      MJ_APIKEY_PRIVATE: $MJ_APIKEY_PRIVATE
     ports:
       - 8787:3000
     networks:
