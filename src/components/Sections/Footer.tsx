@@ -7,12 +7,11 @@ import Socials from '../Socials';
 
 
 const Footer: FC = memo(() => {
-  const [nVisitors, setNVisitors ] = useState(0)
+  const [nVisitors, setNVisitors ] = useState(null)
 
   useEffect( () => {
     ( async () => {
       const response = await axios.get('/api/visitors');
-      console.log("response ", response.data)
       setNVisitors( response.data.n_visitors )
     })();
   }, [])

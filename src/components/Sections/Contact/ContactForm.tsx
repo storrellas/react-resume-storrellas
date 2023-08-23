@@ -1,4 +1,6 @@
+import axios from 'axios';
 import {FC, memo, useCallback, useMemo, useState} from 'react';
+
 
 interface FormData {
   name: string;
@@ -36,6 +38,7 @@ const ContactForm: FC = memo(() => {
        * This is a good starting point to wire up your form submission logic
        * */
       console.log('Data to send: ', data);
+      await axios.post('/api/contact', data);
     },
     [data],
   );
